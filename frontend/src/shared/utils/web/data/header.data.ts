@@ -1,5 +1,6 @@
 import { IconType } from "react-icons"
-import { FaFacebook } from "react-icons/fa"
+import { BsPaypal } from "react-icons/bs"
+import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa"
 
 interface HeaderData {
   logo: string
@@ -18,5 +19,9 @@ export const headerData: HeaderData = {
   ],
   infoLinks: [
     { name: "Facebook", href: "https://www.facebook.com/adoptasalvavidas.pe?locale=es_LA", icon: FaFacebook },
+    { name: "Whatsapp", href: "https://api.whatsapp.com/send?phone=51955288116", icon: FaWhatsapp },
+    { name: "Instagram", href: "https://www.instagram.com/Albergue.adoptasalvavidas", icon: FaInstagram },
+    { name: "Tiktok", href: "https://www.tiktok.com/@adopta.salvavidas", icon: FaTiktok },
+    { name: "Paypal", href: "https://www.paypal.com/paypalme/julyavelino", icon: BsPaypal }
   ]
 }
