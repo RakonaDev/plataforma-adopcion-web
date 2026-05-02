@@ -38,10 +38,10 @@ export default function Button({
 
       <button
         {...props}
-        className={`border-primary border-2 text-primary px-4 py-2 rounded-lg button-css cursor-pointer ${classNames(props.className)}`}
+        className={`border-primary border-2 text-primary px-4 py-2 rounded-lg button-css cursor-pointer group-hover:text-white ${classNames(props.className)}`}
         onClick={handleClick}
       >
-        <span className="flex items-center gap-2 relative z-20">
+        <span className="flex items-center gap-2 relative z-30">
           {props.icon && <div className="icon-container">{props.icon}</div>}
           {children}
         </span>

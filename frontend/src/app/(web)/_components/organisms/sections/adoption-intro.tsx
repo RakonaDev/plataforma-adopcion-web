@@ -6,6 +6,7 @@ import { FaStar } from "react-icons/fa";
 import { RxCaretRight } from "react-icons/rx";
 import Button from "../../atoms/button/button";
 import Title from "../../atoms/title";
+import { socialLinks } from "@/app/(web)/_utils/data/socialLinks";
 
 export default function AdoptionIntro() {
   return (
@@ -22,7 +23,7 @@ export default function AdoptionIntro() {
               <div className="space-y-5">
                 <Title  
                   htmlTag='h1'
-                  className="text-7xl/[1.2] font-bold text-slate-800"
+                  className=" font-bold text-slate-800"
                 >
                   Encuentra tu{" "}
                   <span className="text-primary">compañero perfecto</span>
@@ -49,12 +50,12 @@ export default function AdoptionIntro() {
 
               <div className="border-t-[0.5px] border-slate-400/50 py-5">
                 <div>
-                  <h3 className="font-bold text-2xl text-slate-800">
+                  <Title htmlTag="h3" className="font-bold text-2xl! text-slate-800">
                     Siguenos en nuestras{" "}
                     <span className="text-primary ">redes sociales</span>
-                  </h3>
+                  </Title>
                   <div className="mt-5 flex gap-4 flex-wrap">
-                    {headerData.infoLinks.map((link, index) => (
+                    {socialLinks.map((link, index) => (
                       <Link
                         key={index}
                         href={link.href}

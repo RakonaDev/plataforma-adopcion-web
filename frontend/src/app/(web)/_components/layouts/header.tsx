@@ -10,7 +10,7 @@ import Button from "../atoms/button/button";
 
 export default async function Header() {
   return (
-    <div className="w-full bg-white fixed z-50 top-0 left-0">
+    <div className="w-full bg-white fixed z-50 top-0 left-0 shadow-lg shadow-black/20 transition-shadow duration-300">
       <Container className="flex justify-between items-center">
         <ImageExpandable
           src={headerData.logo}
