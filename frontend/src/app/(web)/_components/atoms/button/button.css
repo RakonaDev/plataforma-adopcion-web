@@ -20,3 +20,7 @@
 .button-css:hover::before {
   transform: translateX(0);
 }
+
+.button-container:hover .space-custom {
+  width: 0;
+}
