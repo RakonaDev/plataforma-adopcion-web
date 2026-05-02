@@ -1,6 +1,7 @@
 "use client"
 
 import BannerHome from "@/app/(web)/_components/atoms/banner/banner-home";
+import AboutSection from "@/app/(web)/_components/organisms/sections/about-section";
 import AdoptProccess from "@/app/(web)/_components/organisms/sections/adopt-proccess";
 import AdoptionIntro from "@/app/(web)/_components/organisms/sections/adoption-intro";
 import PetsSection from "@/app/(web)/_components/organisms/sections/pets-section";
@@ -23,6 +24,8 @@ export default function HomePage() {
       <AdoptProccess />
 
       <SponsorshipSection />
+
+      <AboutSection />
     </>
   );
 }

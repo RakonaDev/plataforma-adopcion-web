@@ -40,19 +40,19 @@ export default function AdoptProccess() {
         <div className="pt-10 border-t-[0.5px] border-slate-400/50 mt-10 flex gap-5 items-stretch">
           <div className="w-full">
             <span className="text-3xl font-bold text-terciary">100%</span>
-            <Title htmlTag="h3" className="mt-3 text-lg text-gray-700 font-medium">Acompañamiento Post-Adopción</Title>
+            <Title htmlTag="h6" className="mt-3 text-lg text-gray-700 font-medium">Acompañamiento Post-Adopción</Title>
             <p className="mt-3 text-base text-gray-500">Te brindamos seguimiento completo durante el primer mes.</p>
           </div>
           
           <div className="w-full">
             <GiCheckMark size={36} className="text-terciary" />
-            <Title htmlTag="h3" className="mt-3 text-lg text-gray-700 font-medium">Revisión Médica Completa</Title>
+            <Title htmlTag="h6" className="mt-3 text-lg text-gray-700 font-medium">Revisión Médica Completa</Title>
             <p className="mt-3 text-base text-gray-500">Todas nuestras mascotas están vacunadas y revisadas.</p>
           </div>
 
           <div className="w-full">
             <span className="text-3xl font-bold text-terciary">24/7</span>
-            <Title htmlTag="h3" className="mt-3 text-lg text-gray-700 font-medium">Soporte Disponible</Title>
+            <Title htmlTag="h6" className="mt-3 text-lg text-gray-700 font-medium">Soporte Disponible</Title>
             <p className="mt-3 text-base text-gray-500">Responderemos tus preguntas cuando las necesites.</p>
           </div>
         </div>
