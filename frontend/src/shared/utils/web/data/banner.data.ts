@@ -1,9 +1,12 @@
-
 export interface BannerHomeItem {
   src: string
   alt: string
   title: string
   subtitle: string
+  description: string
+  cta: string
+  ctaLink: string
+  category: 'adopcion' | 'donacion' | 'voluntariado' | 'seguimiento'
 }
 
 export interface BannerHomeData {
@@ -13,16 +16,54 @@ export interface BannerHomeData {
 export const bannerData: BannerHomeData = {
   items: [
     {
-      src: "/banners/banner_1.jpg",
-      alt: "Banner 1",
-      title: "Banner 1",
-      subtitle: "Subtitle 1"
+      src: '/home/banners/banner-1.jpg',
+      alt: 'Adopta tu mascota perfecta',
+      title: 'Encuentra tu Compañero Perfecto',
+      subtitle: 'Miles de mascotas esperan tu amor',
+      description: 'Cada adopción es un acto de amor. Nuestras mascotas necesitan un hogar donde puedan ser felices. Haz una diferencia hoy y cambia una vida.',
+      cta: 'Ver Mascotas',
+      ctaLink: '#mascotas',
+      category: 'adopcion'
     },
     {
-      src: "/banners/banner_2.jpg",
-      alt: "Banner 2",
-      title: "Banner 2",
-      subtitle: "Subtitle 2"
+      src: '/home/banners/banner-2.jpg',
+      alt: 'Sé padrino de una mascota',
+      title: 'Apadrina y Haz la Diferencia',
+      subtitle: 'Apoya a nuestras mascotas sin compromisos de adopción',
+      description: 'Con tu aporte mensual, proporcionas alimento, cuidados médicos y amor. Recibe fotos y actualizaciones mensuales de tu mascota.',
+      cta: 'Conviértete en Padrino',
+      ctaLink: '#apadrinamiento',
+      category: 'donacion'
+    },
+    {
+      src: '/home/banners/banner-3.jpg',
+      alt: 'Únete como voluntario',
+      title: 'Voluntariado: Haz Voluntad',
+      subtitle: 'Dedica tu tiempo a lo que realmente importa',
+      description: 'Necesitamos manos amigas para cuidar, pasear y socializar a nuestras mascotas. Si amas a los animales, ¡te necesitamos!',
+      cta: 'Sé Voluntario',
+      ctaLink: '#voluntariado',
+      category: 'voluntariado'
+    },
+    {
+      src: '/home/banners/banner-4.jpg',
+      alt: 'Seguimiento post-adopción',
+      title: 'Estamos Contigo Después de la Adopción',
+      subtitle: 'Tu mascota merece lo mejor siempre',
+      description: 'Nuestro equipo de expertos está disponible 24/7 para asesorarte sobre cuidados, salud y comportamiento de tu nueva familia.',
+      cta: 'Acceder a Soporte',
+      ctaLink: '#soporte',
+      category: 'seguimiento'
+    },
+    {
+      src: '/home/banners/banner-5.jpg',
+      alt: 'Historias de éxito',
+      title: 'Historias que Inspiran',
+      subtitle: 'Conoce las transformaciones que hemos logrado juntos',
+      description: 'Cientos de familias han encontrado la felicidad adoptando con nosotros. Lee sus historias y déjate inspirar para dar el siguiente paso.',
+      cta: 'Ver Historias',
+      ctaLink: '#historias',
+      category: 'adopcion'
     }
   ]
 }

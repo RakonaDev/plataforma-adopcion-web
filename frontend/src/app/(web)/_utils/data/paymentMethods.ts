@@ -8,9 +8,24 @@ export const paymentMethods: PaymentMethod[] = [
     icon: BsPaypal,
   },
   {
-    name: "July",
-    account: "121312313123",
-    imageMehtod: "" 
+    name: "July Avelino",
+    account: "955288116",
+    imageMehtod: "/home/methods/yape-y-plin.jpg"
+  },
+  {
+    name: "BCP",
+    account: "194 3819 3914 010",
+    imageMehtod: "/home/methods/bcp.jpg"
+  },
+  {
+    name: "Interbank",
+    account: "898 3305540929",
+    imageMehtod: "/home/methods/interbank.png"
+  },
+  {
+    name: "BBVA",
+    account: "0011 0048 0200 205504",
+    imageMehtod: "/home/methods/bbva.jpg" 
   }
 ]
 

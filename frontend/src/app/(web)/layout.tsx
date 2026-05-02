@@ -1,6 +1,7 @@
 import React from 'react'
 import { Roboto_Flex } from 'next/font/google'
 import Header from './_components/layouts/header'
+import Footer from './_components/layouts/footer'
 
 const robotoFlex = Roboto_Flex({
   subsets: ['latin'],
@@ -13,6 +14,7 @@ export default function WebLayout({ children }: { children: React.ReactNode }) {
     <div className={`${robotoFlex.className}`}>
       <Header />
       {children}
+      <Footer />
     </div>
   )
 }
