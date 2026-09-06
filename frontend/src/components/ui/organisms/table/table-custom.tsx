@@ -7,6 +7,7 @@ import TableMessageRow from "../../atoms/table/table-message-row";
 import TableBodyCell from "../../atoms/table/table-body-cell";
 import { TablePagination } from "@/app/dashboard/_components/atoms/table-pagination";
 import TableActions, { RowAction } from "../../molecules/table/table-actions";
+import { useWindowWidth } from "@/hooks/use-window-width";
 
 export interface TableColumn<T> {
   key: string;
@@ -49,6 +50,8 @@ export default function CustomTable<T>({
   tbodyClassName,
   trClassName,
 }: CustomTableProps<T>) {
+  const { isMobile } = useWindowWidth();
+
   const hasActions = !!(actions && actions.length > 0);
 
   return (
@@ -64,7 +67,10 @@ export default function CustomTable<T>({
               theadClassName,
             )}
           >
-            <TableGridRow columnsCount={columns.length} hasActions={hasActions}>
+            <TableGridRow
+              columnsCount={hasActions ? columns.length + 1 : columns.length}
+              hasActions={hasActions}
+            >
               {columns.map((col) => (
                 <TableHeaderCell key={col.key} label={col.label} />
               ))}
@@ -76,7 +82,7 @@ export default function CustomTable<T>({
           <div
             role="rowgroup"
             className={cn(
-              "flex flex-col lg:block gap-4 lg:gap-0 divide-y-0 lg:divide-y lg:divide-gray-100 mt-4 lg:mt-5 shadow-sm shadow-slate-500 border-2 border-slate-200 bg-white rounded-xl ",
+              "flex flex-col lg:block gap-4 lg:gap-0 divide-y-0 lg:divide-y lg:divide-gray-100 mt-4 lg:mt-5 lg:shadow-sm lg:shadow-slate-500 lg:border-2 lg:border-slate-200 lg:bg-white lg:rounded-xl ",
               tbodyClassName,
             )}
           >
@@ -86,7 +92,7 @@ export default function CustomTable<T>({
               </TableMessageRow>
             ) : isLoading ? (
               <TableGridRow
-                columnsCount={columns.length}
+                columnsCount={hasActions ? columns.length + 1 : columns.length}
                 hasActions={hasActions}
                 className={trClassName}
               >
@@ -116,10 +122,12 @@ export default function CustomTable<T>({
               data.map((row) => (
                 <TableGridRow
                   key={keyExtractor(row)}
-                  columnsCount={columns.length}
+                  columnsCount={
+                    hasActions ? columns.length + 1 : columns.length
+                  }
                   hasActions={hasActions}
                   className={cn(
-                    "lg:hover:bg-gray-50/50 transition-colors p-4 lg:p-0 border border-gray-200 lg:border-none rounded-xl lg:rounded-none bg-white relative",
+                    "transition-colors p-4 lg:p-0 border border-gray-200 lg:border-none rounded-xl lg:rounded-none bg-white lg:bg-transparent relative",
                     trClassName,
                   )}
                 >
@@ -136,12 +144,20 @@ export default function CustomTable<T>({
 
                   {/* Acciones de la fila */}
                   {hasActions && (
-                    <div
-                      role="cell"
-                      className="flex justify-end lg:justify-center items-center px-0 lg:px-6 py-2 lg:py-4 text-sm absolute top-2 right-2 lg:static"
-                    >
-                      <TableActions actions={actions!} rowData={row} />
-                    </div>
+                    <>
+                      {isMobile ? (
+                        <>
+                          <TableActions actions={actions!} rowData={row} />
+                        </>
+                      ) : (
+                        <div
+                          role="cell"
+                          className="flex justify-end lg:justify-center items-center px-0 lg:px-6 py-2 lg:py-4 text-sm relative top-2 right-2 lg:static"
+                        >
+                          <TableActions actions={actions!} rowData={row} />
+                        </div>
+                      )}
+                    </>
                   )}
                 </TableGridRow>
               ))
