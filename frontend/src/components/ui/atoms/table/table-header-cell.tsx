@@ -27,7 +27,7 @@ export default function TableHeaderCell({
     <div
       role="columnheader"
       className={cn(
-        `min-w-0 w-full px-4 py-6 flex items-center justify-center text-sm font-semibold text-white ${montserrat.className}`,
+        `min-w-0 w-full px-4 py-6 flex items-center justify-center text-sm font-extrabold text-white ${montserrat.className}`,
         className,
       )}
     >

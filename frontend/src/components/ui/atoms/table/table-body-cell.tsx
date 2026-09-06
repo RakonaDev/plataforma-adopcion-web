@@ -1,5 +1,6 @@
 // src/components/atoms/table-body-cell.tsx
 
+import { inter } from "@/lib/fonts/inter";
 import { cn } from "@/lib/utils";
 
 interface TableBodyCellProps {
@@ -22,7 +23,7 @@ export default function TableBodyCell({
     <div
       role="cell"
       className={cn(
-        "min-w-0 w-full flex items-center justify-center gap-4 px-0 py-1.5 lg:px-4 lg:py-4 text-sm text-gray-700",
+        `min-w-0 w-full flex items-center justify-center gap-4 px-0 py-1.5 lg:px-4 lg:py-4 text-sm text-gray-700 ${inter.className}`,
         className,
       )}
     >
@@ -30,7 +31,7 @@ export default function TableBodyCell({
         {label}
       </span>
       <span
-        className="min-w-0 text-right lg:text-left w-full lg:w-auto truncate"
+        className="min-w-0 text-right lg:text-left w-full lg:w-auto truncate font-normal lg:font-medium"
         title={typeof children === "string" ? children : undefined}
       >
         {children}
